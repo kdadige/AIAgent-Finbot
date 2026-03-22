@@ -1,0 +1,10 @@
+langchain
+langchain-groq
+langchain-community
+langgraph
+langgraph-checkpoint-sqlite
+yfinance
+wikipedia
+google-search-results
+fastapi
+uvicorn

@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer utilities {
+  .hidden-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hidden-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-slate-50 antialiased min-h-screen overflow-hidden;
+    background-image: radial-gradient(circle at 15% 50%, rgba(30, 58, 138, 0.15), transparent 25%),
+                      radial-gradient(circle at 85% 30%, rgba(88, 28, 135, 0.15), transparent 25%);
+    background-color: theme('colors.zinc.950');
+  }
+  
+  /* Adding some basic styles for the markdown lists the agent spits out */
+  .list-styles ul {
+    @apply list-disc pl-5 my-2 space-y-1;
+  }
+  .list-styles ol {
+    @apply list-decimal pl-5 my-2 space-y-1;
+  }
+  .list-styles strong {
+    @apply font-semibold text-white;
+  }
+  .title-glow {
+    text-shadow: 0 0 20px rgba(96, 165, 250, 0.4);
+  }
+}
